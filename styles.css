@@ -1,0 +1,88 @@
+.nav {
+    background: #242423;
+    color: #ffd35b;
+    text-align: center;
+    padding: 25px;
+}
+
+body {
+    background: #242423;
+}
+
+.container { 
+    padding-top: 50px;
+}
+
+.card-content {
+    background: #333533;
+}
+
+.card-title {
+    color: #faedcb;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+hr {
+    border-color: #000;
+    height: 1px;
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    margin: 10px 0;
+}
+
+p {
+    color: #fff;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.btn {
+    background: #242423;
+    color: #fff;
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #ffd35b;
+    color: #000;
+}
+
+input {
+    color: #faedcb;
+}
+
+.error {
+    color: #ff85a1;
+    font-family: 'Lora', serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+footer, h1 {
+    color: #ccc;
+    font-family: 'Poppins', sans-serif;
+    font-size: .8em;
+    text-align: center;
+}
+
+a:link, a:visited, a:active, a:hover {
+    color: #bee9e8;
+}
+
+.tip {
+    padding: 10px;
+    background: #242423;
+    color: #fff;
+}
+
+.tip .delete {
+    color:#ffd35b;
+    font-size: 0.8em;
+}

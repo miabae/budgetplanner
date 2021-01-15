@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Lora:wght@500&display=swap" rel="stylesheet">
+    <title>Budget Planner</title>
+</head>
+<body>
+    <div class="nav z-depth-0">
+        <h3>Budget Planner</h3>
+        <p>a way to visualize your spending:</p><hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <form class="card z-depth-0 black">
+                    <div class="card-content">
+                        <span class="card-title">What Item is Next?</span>
+                            <div class="input-field">
+                            <input type="text" id="name">
+                            <label for="name">Item Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="cost">
+                                <label for="name">Item Cost ($)</label>
+                            </div>
+                            <div class="input-field center">
+                                <button class="btn">Add Item</button>
+                            </div>
+                            <div class="input-field center">
+                                <p class="error" id="error"></p>
+                            </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col s12 m5 push-m1">
+                <div class="canvas"></div>
+            </div>
+        </div>
+        <footer>
+            <h1>by: <a href="https://miabae.github.io/" target="_blank">Mia Bae</a></h1>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyD_pVNkbUq_HdvMBL0VZfULxI_FAjvl7BI",
+        authDomain: "udemy-d3-firebase-bc7a8.firebaseapp.com",
+        projectId: "udemy-d3-firebase-bc7a8",
+        storageBucket: "udemy-d3-firebase-bc7a8.appspot.com",
+        messagingSenderId: "586964205113",
+        appId: "1:586964205113:web:f922d8ddf2f5d65fdf57e8"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const settings = { timestampsInSnapshots: true };
+    db.settings(settings);
+    </script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js" integrity="sha512-wNH6xsp2n8CfB91nrBtfc4sfLwYPBMjSWVUwQOp60AYYXH6i8yCwuKFZ4rgK2i6pQek/b+bSyR7b01/922IBzQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js" integrity="sha512-jaNmuLbHtQ1ND+i63wVvwBd9T2hB3gTnk3x0Pp5R+AJwDdyzMe3t0vQqwUSoI9a/Ol1nscGV/1et4zSwL0P3AA==" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+</body>
+</html>
